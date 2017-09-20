@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /><title>Projet Interfaces graphiques 2017</title>
+
+<meta name="generator" content="Amaya, see http://www.w3.org/Amaya/"
+      />
+	<link rel="stylesheet" type="text/css"
+	href="variant-rounded.css"
+	title="Interfaces graphiques" 
+media="screen,projection" />
+
+
+</head>
+
+
+<body>
+<div id="wrap">
+
+<div id="headrr"></div>
+<div id="sitemenu"></div>
+<div id="extras">
+</div>
+
+
+
+<div id="content">
+<h2><span style="font-weight: bold;">Vampires et pistolero.</span></h2>
+<span style="font-weight: bold;"></span>
+<p xml:lang="fr" lang="fr">
+Le but du projet est de créer un jeu (genre shoot them up) où vous incarnez un pistolero chargé de tuer les vampires.
+Le jeu se joue sur une arène où évoluent les personnages. Vous dirigez le pistolero à l'aide du clavier. Prévoir les mouvements verticaux et horizontaux pour le pistolero et pour les vampires, et peut-être, pourquoi pas, les diagonales, on peut imaginer que les 4 touches "flèches" sur le clavier provoquent les déplacements verticaux et horizontaux, mais modifiées avec une autre touche elle permettent les déplacements sur les deux diagonales ou alors en gérant les "press"/"release" correctement.
+
+
+<!--
+%Le but du projet est de
+%créer un jeu (genre shoot them up) où vous incarnez un
+%pistolero chargé de touer les vampires.<br />
+%Le jeu se joue sur une arène où évoluent les personnages.
+
+%Vous dirigez le pistolero à l'aide du clavier. Prévoir les mouvements
+%verticales et horizontales pour le pistolero et
+%pour les vampires, et peut-être, pourquoi pas, sur les diagonales, on
+%peut imaginer que les 4 touches "flèches" sur le clavier provoquent les
+%déplacements verticales et horizontales, mais modifiées avec une autre
+%  touche elle
+%permettent les déplacements sur les deux diagonales.</p>
+-->
+
+
+
+<p xml:lang="fr" lang="fr">
+Les règles du jeu sont simples. Pistolero peut tirer une balle d'argent, toujours dans la direction en face de lui. Si la balle atteint un vampire celui-ci est tué sur le champ. On pourra tirer en utilisant le clavier mais aussi avec un bouton de la souris.
+</p>
+
+<!--
+%Les règles de jeux sont
+%simples. Pistolero peut tirer une balle d'argent, toujours
+%dans la direction &nbsp;en face de lui. Si la balle atteint un vampire
+%&nbsp;celui-ci est tué sur le champs. On pourra tirer en utilisant
+%le clavier mais aussi avec un bouton de la souris.</p>
+-->
+
+<p xml:lang="fr" lang="fr">
+La balle devait être représentée par un petit disque ou une icône approprié de telle sorte que son trajet soit visible. Le vampire touché par la balle change brièvement d'aspect visuel avant de disparaître (pensez aux effets visuels de javafx).
+</p>
+
+<!--
+%La balle devait être représentée par un
+%  petit cercle de telle sorte que son trajet soit visible.
+
+
+%Le vampire touché par la balle  change brièvement l'aspect visuel
+%avant de disparaître (pensez aux effets visuels de javafx).</p>
+-->
+<p xml:lang="fr" lang="fr">
+Le vampire mord le pistolero quand il entre en collision avec lui. Chaque morsure affaiblit le pistolero et la troisième est mortelle, le pistolero lui même devient vampire. Pensez à changer l'aspect visuel d'un pistolero affaibli.
+<!--
+%Le vampire
+%mord le pistolero quand il entre
+%en collision avec lui.
+%Chaque morsure affaiblit le pistolero et la troisième est
+%  mortelle, le pistolero lui même devient vampire.
+%Pensez à changer l'aspect visuel d'un pistolero affaibli.
+-->
+</p>
+
+<p>
+Les vampires  changent la direction de mouvement soit quand ils heurtent un obstacle (mettre des obstacles sur l'arène) soit spontanément (mais pas trop souvent et pas tous les vampires au même moment).  Utiliser un générateur de nombres aléatoires. 
+
+<!--
+%Les vampires&nbsp; changent la direction de mouvement soit quand ils heurtent
+%un obstacle (mettre des obstacles sur l'arène) soit spontanément
+%(mais pas trop souvent et pas tous les vampires au même moment).
+%&nbsp;Utiliser un générateur de nombres aléatoires. 
+-->
+
+<br />
+<br />
+Avec un MVC (modèle vue contrôleur) bien structuré on peut essayer plusieurs règles de mouvement de vampires, par exemple 
+
+<!--
+%Avec MVC (modèle vue contrôleur) bien structuré on peut essayer
+%plusieurs règles de mouvement de vampires, par exemple
+-->
+ <br />
+ <ul>
+   <li>
+     les vampires changent la direction de façon aléatoire, 
+     ils sont comme aveugles, 
+<!--
+les vampires changent la direction de façon aléatoires, ils
+sont comme aveugles,&nbsp;
+-->
+   </li>
+   <li>
+     ou bien ils ont une tendance à se diriger 
+     intentionnellement vers le pistolero,
+<!--ou bien ils ont une tendance
+à se diriger intentionnellement vers le pistolero,
+-->
+   </li>
+   <li>
+     on peut aussi concevoir les vampires 
+     intelligents qui essaient d'éviter la ligne de tir, etc.
+
+<!--     on peut aussi concevoir les vampires intelligents qui
+essaient d'éviter la ligne de tire.-->
+   </li>
+ </ul>
+
+
+ Les vampires  mâles et femelles :
+<br />
+si deux vampires mâles  entrent en collision un seul  survivra, par
+contre une rencontre d'un vampire mâle et un vampire femelle fait
+naître un nouveau petit vampire (choisir les icônes différentes pour
+les mâles et les femelles).
+
+<!--
+si
+deux vampires mâles&nbsp; entrent en collision un seul&nbsp; survivra,
+par contre une rencontre d'un vampire mâle et un
+vampire femelle fait naître un nouveau petit vampire (choisir les icônes
+différentes pour les mâles et les femelles) .
+-->
+
+
+
+<br/>
+
+Un <code>Slider</code> permettra de changer les vitesses de mouvement
+de personnages, on peut même prévoir deux Sliders, un pour la vitesse
+des vampires et un autre pour la vitesse de pistolero.
+Cependant il est préférable que chaque vampire ait sa propre vitesse, donc le Slider de vitesse change la cadence du jeu (ralentit ou accélère la vitesse de vampires) mais le vampire rapide reste plus rapide que le vampire lent. 
+
+<!--
+Un <code>Slider</code> permettra de changer les vitesses de mouvement de
+personnages, on peut même prévoir deux Sliders, un pour la vitesse de
+vampires et un autre pour la vitesse de pistolero.<br />
+Cependant il est préférable que  chaque vampire ait sa propre
+vitesse, donc le Slider de vitesse change la cadence du jeu (ralentit
+ou accélère la vitesse de vampires) mais le vampire rapide reste plus
+rapide que le vampire lent.
+-->
+<br />
+
+On donnera à l'utilisateur la possibilité d'arrêter le jeu (pause) et de changer l'affectation de touches. 
+
+<!--
+On donnera à l'utilisateur la possibilité 
+d'arrêter le jeu (pause) et
+de changer
+l'affectation de touches.
+-->
+
+
+<br />
+Prévoir: <br />
+<ol>
+  <li>l'affichage en temps réel du nombre de vampires qui restent à
+    éliminer
+  </li>
+  <li>
+    l'affichage du nombre de vampires éliminés
+  </li>
+  <li>
+    l'affichage de quantité de balles (avec <code>ProgressBar</code>
+    ou 
+    <code>ProgressIndicator</code>). Quand les balles sont épuisées,
+    attendre un peu avant de renouveler le stock. 
+    Pendant ce temps la seule action disponible pour le pistolero est de fuir.
+
+<!--
+l'affichage de quantité de balles (avec ProgressBar ou
+  ProgressIndicator). Quand les balles sont épuisées, attendre un peu
+  avant de renouveler le stock. Pendant ce temps la seule action
+  disponible pour le pistolero est de fuir.-->
+  </li>
+  <li>
+    la possibilité de tire en rafale,
+  </li>
+  <li>
+    la sauvegarde du score de jeu pour chaque joueur 
+    (le joueur étant identifié par un pseudo au début de la partie),
+  </li>
+<!--
+    la sauvegarde de score de jeu pour chaque joueur (le joueur
+  identifié par un pseudo au début de la partie), </li>
+-->
+  <li>
+    les positions des obstacles doivent changer d'une partie à l'autre
+    (utiliser les générateurs de nombre aléatoires pour trouver les
+    positions des obstacles), les balles ne peuvent pas traverser les
+    obstacles.
+
+<!--
+les
+positions des obstacles doivent changer d'une partie à l'autre
+(utiliser les générateur de nombre aléatoires pour trouver les
+positions des obstacles, les balles ne peuvent pas traverser les
+obstacles.
+-->
+  </li>
+  <li>
+    certains obstacles sont amovibles (le pistolero peut les "pousser"),
+  </li>
+  <li>
+    les effets sonores (pour le tire, le cri du vampire touché par
+    balle, etc.),
+  </li>
+  <li>
+    on pourra chronométrer une partie (chronomètre visible toujours ou
+    à la demande). Le chronomètre s'arrête quand la partie est en pause.
+  </li>
+</ol>
+
+<p>
+  La partie termine s'il n'y a plus de vampires à chasser. 
+  Prévoir un effet visuel et sonore pour saluer le vainqueur.
+
+
+<p xml:lang="fr" lang="fr">
+  Vous êtes libre d'ajouter d'autres possibilités, 
+  surtout si cela apporte quelque chose nouveau de point de vue 
+  de la programmation.
+</p>
+
+<!--
+Vous êtes libre à ajouter d'autres
+  possibilités, surtout si cela apporte quelque chose nouveau de point
+  de vu de la programmation.
+-->
+
+<h2>Modalité.</h2>
+<dl>
+<dt>Le projet est à réaliser en javafx  en binôme. Les dates de remise et de
+soutenances seront fixées ultérieurement. </dt>
+</dl>
+</div>
+
+
+</body></html>

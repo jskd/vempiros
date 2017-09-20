@@ -1,0 +1,22 @@
+
+#button-start {
+    -fx-background-color:
+        #000000,
+        linear-gradient(#ea8080, #8e2e2e),
+        linear-gradient(#b84242, #742525),
+        linear-gradient(#ac3939, #682222);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#button-start:hover {
+    -fx-background-color:
+        #000000,
+        linear-gradient(#f4bdbd, #c13e3e),
+        linear-gradient(#c96969, #ae3737),
+        linear-gradient(#cc6666, #9a3232);
+}
+
